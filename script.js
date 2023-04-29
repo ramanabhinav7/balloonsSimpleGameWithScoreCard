@@ -28,6 +28,28 @@ balloons.forEach((balloon) => {
     }
     count++;
   };
+  function updateLevel( level){
+    if( level ==0){
+     document.querySelector(':root').style.setProperty('--time','7s');
+    }
+    else if(level ==1){
+      document.querySelector(':root').style.setProperty('--time','5s');
+    }
+    else{
+      document.querySelector(':root').style.setProperty('--time','1s');
+    }
+  }
+// set Level of your game 
+//get the button 
+const level0 = document.getElementById("easy");
+const level1 = document.getElementById("meadium");
+const level2 = document.getElementById("hard");
+
+// add event listner to activate the function
+level0.addEventListener("click",()=>updateLevel(0));
+level1.addEventListener("click",()=>updateLevel(1));
+level2.addEventListener("click",()=>updateLevel(2));
+
 
 
 // add more ballons
@@ -44,8 +66,8 @@ addballonbutton.addEventListener("click", () => {
 
   // create a child 'div'
   const ballonElement = document.createElement("div");
-
-  ballonElement.classList.add("balloon","blue");
+  
+  ballonElement.classList.add("balloon","yellow");
   // ballonElement.classList.add("blue");
   ballonElement.addEventListener('click',()=>updateScore(ballonElement))
 
@@ -58,21 +80,21 @@ addballonbutton.addEventListener("click", () => {
 const countdown = document.getElementById("countdown");
 let timeLeft = 21;
 
-const timer = setInterval(() => {
-  timeLeft--;
-  countdown.innerText = timeLeft;
+// const timer = setInterval(() => {
+//   timeLeft--;
+//   countdown.innerText = timeLeft;
 
-  if (timeLeft === 0) {
-    clearInterval(timer);
-    // Determine the winner
-    if (score1 > score2) {
-      alert("Player 1 wins!");
-    } else if (score2 > score1) {
-      alert("Player 2 wins!");
-    } else {
-      alert("It's a tie!");
-    }
+//   if (timeLeft === 0) {
+//     clearInterval(timer);
+//     // Determine the winner
+//     if (score1 > score2) {
+//       alert("Player 1 wins!");
+//     } else if (score2 > score1) {
+//       alert("Player 2 wins!");
+//     } else {
+//       alert("It's a tie!");
+//     }
 
-    location.reload();
-  }
-}, 1000);
+//     location.reload();
+//   }
+// }, 1000);

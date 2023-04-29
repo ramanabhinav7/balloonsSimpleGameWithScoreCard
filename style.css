@@ -1,3 +1,8 @@
+:root {
+  --time:7s;
+}
+
+
 .game-board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -47,7 +52,7 @@
 }
 
 .balloon {
- animation: balloonMove 7s infinite alternate-reverse;
+ animation: balloonMove var(--time) infinite alternate-reverse;
 }
 
 @keyframes balloonMove {
@@ -57,7 +62,7 @@
   }
 
   100% {
-    margin-left: 200px;
-    opacity: 0.2;
+    margin-left: 251px;
+    opacity: 1;
   }
 }
