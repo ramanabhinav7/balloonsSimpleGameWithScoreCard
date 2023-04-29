@@ -83,21 +83,21 @@ addballonbutton.addEventListener("click", () => {
 const countdown = document.getElementById("countdown");
 let timeLeft = 21;
 
-// const timer = setInterval(() => {
-//   timeLeft--;
-//   countdown.innerText = timeLeft;
+const timer = setInterval(() => {
+  timeLeft--;
+  countdown.innerText = timeLeft;
 
-//   if (timeLeft === 0) {
-//     clearInterval(timer);
-//     // Determine the winner
-//     if (score1 > score2) {
-//       alert("Player 1 wins!");
-//     } else if (score2 > score1) {
-//       alert("Player 2 wins!");
-//     } else {
-//       alert("It's a tie!");
-//     }
+  if (timeLeft === 0) {
+    clearInterval(timer);
+    // Determine the winner
+    if (score1 > score2) {
+      alert("Player 1 wins!");
+    } else if (score2 > score1) {
+      alert("Player 2 wins!");
+    } else {
+      alert("It's a tie!");
+    }
 
-//     location.reload();
-//   }
-// }, 1000);
+    location.reload();
+  }
+}, 1000);
