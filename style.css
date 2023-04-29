@@ -1,0 +1,63 @@
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.balloon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.scoreboard {
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.timer h2 {
+  font-size: 24px;
+}
+
+.timer #countdown {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.balloon {
+ animation: balloonMove 7s infinite alternate-reverse;
+}
+
+@keyframes balloonMove {
+  0% {
+    margin-left: 0px;
+    opacity: 1;
+  }
+
+  100% {
+    margin-left: 200px;
+    opacity: 0.2;
+  }
+}
