@@ -30,12 +30,15 @@ balloons.forEach((balloon) => {
   };
   function updateLevel( level){
     if( level ==0){
+      console.log(easy)
      document.querySelector(':root').style.setProperty('--time','7s');
     }
     else if(level ==1){
+      console.log(meadium)
       document.querySelector(':root').style.setProperty('--time','5s');
     }
     else{
+      console.log(hard)
       document.querySelector(':root').style.setProperty('--time','1s');
     }
   }
